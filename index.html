@@ -13,6 +13,7 @@
             background-color: #eef2f3;
             color: #333;
             transition: all 0.3s ease-in-out;
+            scroll-behavior: smooth; /* 添加此行 */
         }
         header {
             background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -240,12 +241,12 @@
                     <p>参与了无人驾驶船舶导航系统的设计与开发，负责系统架构和算法优化，提高了导航精度和安全性。</p>
                 </li>
                 <li class="timeline-item right">
-                    <h3>海洋环境监测系统</h3>
-                    <p>开发了基于物联网的海洋环境监测系统，实现了对海洋数据的实时采集和分析，为环境保护提供了数据支持。</p>
+                    <h3>水下机器人探测系统开发</h3>
+                    <p>领导了水下机器人探测系统的开发，应用于海洋资源勘探和环境监测，实现了高效的数据采集和分析。</p>
                 </li>
                 <li class="timeline-item left">
-                    <h3>船舶结构优化设计</h3>
-                    <p>参与了多艘船舶的结构优化设计，应用先进的计算方法和工具，提高了船舶的强度和稳定性，降低了建造成本。</p>
+                    <h3>智能船舶管理平台构建</h3>
+                    <p>参与构建了智能船舶管理平台，集成了实时监测、数据分析和远程控制功能，提升了船舶运营效率。</p>
                 </li>
             </ul>
         </div>
@@ -254,29 +255,41 @@
             <div class="skills">
                 <div>
                     <h3>编程语言</h3>
-                    <p>熟悉C/C++、Python、Java等编程语言，具备良好的编程能力和代码优化经验。</p>
+                    <p>熟练掌握C/C++、Python、JavaScript等编程语言，具备良好的代码编写规范和逻辑思维能力。</p>
                 </div>
                 <div>
                     <h3>工程软件</h3>
-                    <p>熟练使用AutoCAD、SolidWorks、ANSYS等工程设计与仿真软件，具有丰富的项目实践经验。</p>
+                    <p>精通Matlab、ANSYS等工程软件的使用，能够进行复杂的工程计算和仿真分析。</p>
                 </div>
                 <div>
                     <h3>项目管理</h3>
-                    <p>具备较强的项目管理能力，能够有效地规划和组织项目，确保按时完成任务。</p>
+                    <p>具有丰富的项目管理经验，熟悉项目计划、进度控制和风险管理等方法，能够高效地推动项目进展。</p>
                 </div>
             </div>
         </div>
         <div id="photos" class="section">
             <h2>照片</h2>
-            <img src="https://github.com/kanzer123/kanzer-personal-website/blob/main/images/00633-3820895343-man,1boy,handsome,black%20hair,short%20hair,.png?raw=true" alt="谭润州的照片" class="photo">
+            <img class="photo" src="https://github.com/kanzer123/kanzer-personal-website/blob/main/images/00633-3820895343-man,1boy,handsome,black%20hair,short%20hair,.png?raw=true" alt="Profile Photo">
         </div>
         <div id="contact" class="section">
             <h2>联系</h2>
-            <p class="contact-item">邮箱：trz13703027981@qq.com</p>
-            <p class="contact-item">电话：+86 15815928725</p>
-            <p class="contact-item">bilibili：<a href="https://space.bilibili.com/283804782" target="_blank">space.bilibili.com/283804782</a></p>
+            <p>可以通过以下方式联系我：</p>
+            <ul>
+                <li class="contact-item">电子邮件：trz13703027981@qq.com</li>
+                <li class="contact-item">电话：+86 15815928725</li>
+                <li class="contact-item">bilibili：<a href="https://space.bilibili.com/283804782" target="_blank">space.bilibili.com/283804782</a></li>
+            </ul>
+            <a class="download-button" href="#">下载我的简历</a>
         </div>
-        <a href="https://pan.baidu.com/s/1sCMpc6-X3ZLfUNSp9v7aiQ?pwd=c9q0" download class="download-button">下载我的简历</a>
     </div>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
